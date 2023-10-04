@@ -33,26 +33,24 @@
    To enable the service to start at boot, use the following commands:
 
    ```bash
-   sudo systemctl enable my-script.service
+   sudo systemctl enable fix_volume.service
    ```
-
-   Replace `my-script.service` with the name you gave to your service file.
 
 4. **Start the Service:**
 
    You can start the service immediately with:
 
    ```bash
-   sudo systemctl start my-script.service
+   sudo systemctl start fix_volume.service
    ```
 
-   This will execute your script with `sudo` privileges.
+   This will execute your script as root.
 
 5. **Check the Service Status:**
 
    You can check the status of the service to ensure it's running and see any potential errors:
 
    ```bash
-   sudo systemctl status my-script.service
+   sudo systemctl status fix_volume.service
    ```
 
