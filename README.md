@@ -57,4 +57,3 @@
    sudo systemctl status my-script.service
    ```
 
-Now, your script should run at boot as `sudo`. If you need to stop or restart it manually, you can use `systemctl stop my-script.service` or `systemctl restart my-script.service`.
