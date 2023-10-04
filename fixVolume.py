@@ -4,8 +4,8 @@ import logging
 
 # Configuration data
 required_config = "[Element Master]\nswitch = mute\nvolume = ignore\n"
-conf_file_path = "/home/hekel/test/analog-output.conf.common"
-log_file_path = "/home/hekel/test/fixVolume.log"
+conf_file_path = "/usr/share/alsa-card-profile/mixer/paths/analog-output.conf.common"
+log_file_path = "/var/log/fix_volume.log"
 
 # Configure logging
 logging.basicConfig(
