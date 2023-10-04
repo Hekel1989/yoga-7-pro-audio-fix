@@ -2,11 +2,11 @@
 
 1. **Create a systemd Service File:**
 
-   Create a new systemd service file for your script. You can place this file in the `/etc/systemd/system/` directory with a `.service` extension, such as `/etc/systemd/system/my-script.service`. Use your preferred text editor to create and edit the file. Here's an example:
+   Create a new systemd service file for your script. Place this file in the `/etc/systemd/system/` directory with a `.service` extension, such as `/etc/systemd/system/fix_volume.service`. Use the template below as reference:
 
    ```plaintext
    [Unit]
-   Description=My Script Description
+   Description=Launch a script to fix the binary volume issue with this laptop.
 
    [Service]
    ExecStart=/usr/bin/python3 /path/to/your/script.py
@@ -19,7 +19,6 @@
    ```
 
    - Replace `/path/to/your/script.py` with the actual path to your Python script.
-   - Customize the `Description` field to describe your service.
 
 2. **Reload systemd:**
 
