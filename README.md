@@ -1,6 +1,6 @@
 # Yoga 7 Pro-Slim/Realtek® ALC3306 Audio Fix
 
-In laptops with the Realtek ALC3306 audio card,there's an issue with current and past kernels when using alsamixer; the Master volume gets triggered by the volume keys of the laptops, but the PCM volume gets immediately set to 100%, no matter the Master volume level. This directly set the volume of the speakers to 100%.
+In laptops with the Realtek ALC3306 audio card,there's an issue with current and past kernels when using Alsa Mixer; the Master volume gets triggered by the volume keys of the laptops, but the PCM volume gets immediately set to 100%, no matter the Master volume level. This directly set the volume of the speakers to 100%.
 
 When Alsa Mixer gets updated, the original file gets restored, thus removing the fix.
 
