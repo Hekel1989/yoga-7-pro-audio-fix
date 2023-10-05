@@ -4,6 +4,14 @@ In laptops with the Realtek ALC3306 audio card,there's an issue with current and
 
 When Alsa Mixer gets updated, the original file gets restored, thus removing the fix.
 
+The fix is to add to the ```/usr/share/alsa-card-profile/mixer/paths/analog-output.conf.common```  the three lines below, at the beginning of the file, followed by a laptop reboot:
+
+```
+[Element Master]
+switch = mute
+volume = ignore 
+```
+
 This scripts aims to automate this process by checking for the presence of the strings required at boot, and, if missing, re populating the file, and issuing a reboot.
 This is achieved through a Python script that is run by a systemd service.
 
