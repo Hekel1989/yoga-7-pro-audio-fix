@@ -1,4 +1,17 @@
-# yoga-7-pro-audio-fix
+# Yoga 7 Pro/Realtek® ALC3306 Audio Fix
+
+In laptops with the Realtek ALC3306 audio card,there's an issue with current and past kernels where Alsa Mixer which makes so volume can only be OFF or ON (at full volume.
+This is easily addressed by adding the strings below to ```/usr/share/alsa-card-profile/mixer/paths/analog-output.conf.common```
+```
+[Element Master]
+switch = mute
+volume = ignore
+```
+When Alsa Mixer gets updated, the original file gets restored, thus removing the fix.
+This scripts aims to automate this process by checking for the presence of the strings required at boot, and, if missing, re populating the file, and issuing a reboot.
+This is achieved through a Python script that is run by a systemd service.
+
+Follow the instructions below to configure it on your machine:
 
 1. **Create a systemd Service File:**
 
